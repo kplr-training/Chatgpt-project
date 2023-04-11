@@ -59,11 +59,11 @@ L'architecture de ChatGPT utilise des transformers pour encoder l'entrée et gé
 Le modèle est entraîné sur des tâches de modélisation de langage naturel pour acquérir des connaissances sur la langue, puis fine-tuné sur des tâches spéci-fiques, telles que la réponse conversationnelle dans le cas d'un chatbot.
 
 ## Architecture de ChatGPT : 
-![image](https://user-images.githubusercontent.com/123748177/231160175-081bb647-f38b-4187-b381-8f1a038ea644.png)
 
--	ChatGPT a été affiné à partir d'un modèle de la série GPT-3.5, qui a terminé son entraînement début 2022. 
+- ChatGPT a été affiné à partir d'un modèle de la série GPT-3.5, qui a terminé son entraînement début 2022. 
 -	ChatGPT et GPT-3.5 ont été entraînés sur une infrastructure de super calcul Azure AI. 
 
+ ![image](https://user-images.githubusercontent.com/123748177/231160175-081bb647-f38b-4187-b381-8f1a038ea644.png)
  
 ## Architecture de GPT-3 : 
  
