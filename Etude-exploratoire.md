@@ -36,20 +36,26 @@ Le modèle GPT fonctionne en utilisant un mécanisme d'attention, qui permet d'i
 Parmi les principales caractéristiques de l'architecture de ChatGPT, on trouve :
 
 - Couches de Transformers :
+
 L'architecture de ChatGPT utilise plusieurs couches de Transformers pour encoder les données d'entrée et générer les prédictions de sortie. Chaque couche de transformer est composée d'un module d'attention qui permet de pondérer les différentes parties de l'entrée en fonction de leur impor-tance.
 
 -	Entraînement supervisé :
+
 ChatGPT est pré-entraîné sur des tâches de modélisation de langage, ce qui lui permet de capturer des informations sémantiques et syntaxiques sur la langue. 
 Le modèle est ensuite fine-tuné sur une tâche spécifique, par exemple la génération de texte pour un chatbot.
 
 -	Génération de texte :
+
 ChatGPT utilise une méthode de génération de texte basée sur un proces-sus de décision probabiliste.
 Le modèle évalue la probabilité de chaque mot possible dans la séquence de sortie en fonction de la séquence d'en-trée et des connaissances préalables acquises lors de l'entraînement.
  
 -	Réponse conversationnelle :
+
 ChatGPT peut être utilisé pour la réponse conversationnelle, en utilisant une séquence de texte d'entrée pour générer une séquence de texte de sortie. 
 Le modèle est entraîné pour prédire la réponse la plus appropriée à une question donnée ou à une entrée de conversation.
+
 L'architecture de ChatGPT utilise des transformers pour encoder l'entrée et géné-rer une séquence de texte de sortie en utilisant un processus de génération pro-babiliste. 
+
 Le modèle est entraîné sur des tâches de modélisation de langage naturel pour acquérir des connaissances sur la langue, puis fine-tuné sur des tâches spéci-fiques, telles que la réponse conversationnelle dans le cas d'un chatbot.
 
 ## Architecture de ChatGPT : 
@@ -243,5 +249,5 @@ ChatGPT est construit et entraîné en utilisant une combinaison d'outils et de 
 -	Selon les exigences spécifiques et les détails de mise en œuvre, ChatGPT peut également utiliser d'autres bibliothèques et outils pour des tâches telles que l'évaluation du modèle, l'optimisation des hy-perparamètres, le déploiement du modèle et la surveillance. 
 
 -	Des exemples de tels outils incluent scikit-learn, TensorFlow, PyTorch Lightning et Docker.
--	
+
 Il est important de noter que les outils et les technologies exacts utilisés pour cons-truire et entraîner ChatGPT peuvent évoluer avec le temps à mesure que de nouvelles technologies émergent et que les meilleures pratiques évoluent.
