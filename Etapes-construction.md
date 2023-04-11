@@ -47,5 +47,5 @@ Pour construire un chatbot en utilisant un modèle de langage comme GPT-3, avec 
 
 - On doit surveiller les performances du chatbot en production et effectuer des mises à jour régulières pour améliorer ses réponses, sa compréhension du langage naturel et sa capacité à répondre aux besoins des utilisateurs.
 - On doit collecter les commentaires des utilisateurs et les utiliser pour améliorer continuellement le chatbot et répondre aux nouvelles exigences et demandes.
-- Il est important de noter que la construction d'un chatbot peut être un processus itératif et évolutif, nécessitant des ajustements et des améliorations continus pour répondre aux besoins des utilisateurs et aux objectifs de l'entreprise. Assurez-vous de respecter les normes de confidentialité et de sécurité des données lors de la collecte et du traitement des informations des utilisateurs, et de vous conformer aux réglementations et aux politiques applicables.
+
 
