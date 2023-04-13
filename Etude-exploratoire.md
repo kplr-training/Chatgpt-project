@@ -59,11 +59,50 @@ L'architecture de ChatGPT utilise des transformers pour encoder l'entrée et gé
 Le modèle est entraîné sur des tâches de modélisation de langage naturel pour acquérir des connaissances sur la langue, puis fine-tuné sur des tâches spéci-fiques, telles que la réponse conversationnelle dans le cas d'un chatbot.
 
 ## Architecture de ChatGPT : 
+ChatGPT est une architecture de modèle de langage développée par OpenAI. Il est basé sur l'architecture Transformer. On peut décrire l’architecture interne de ChatGPT comme suit:
 
-- ChatGPT a été affiné à partir d'un modèle de la série GPT-3.5, qui a terminé son entraînement début 2022. 
--	ChatGPT et GPT-3.5 ont été entraînés sur une infrastructure de super calcul Azure AI. 
+•	**Modèle Transformer :** 
 
- ![image](https://user-images.githubusercontent.com/123748177/231160175-081bb647-f38b-4187-b381-8f1a038ea644.png)
+ChatGPT utilise l'architecture Transformer, qui est composée de deux par-ties principales : l'encodeur et le décodeur. Cependant, dans le cas de GPT (y compris ChatGPT), seule la partie décodeur est utilisée.
+
+•	**Bloc de décodeur :** 
+
+Le décodeur est composé de plusieurs couches identiques empilées les unes sur les autres. 
+Chaque couche contient deux sous-couches principales : une couche d'auto-attention multi-têtes et une couche de réseau de neurones feed-forward. 
+Ces sous-couches sont entourées de connexions résiduelles et de normali-sation de couche pour faciliter l'apprentissage.
+
+•	**Auto-attention multi-têtes :** 
+
+L'auto-attention permet au modèle de pondérer l'importance des mots dans une séquence en fonction de leur contexte. 
+L'auto-attention multi-têtes permet au modèle de se concentrer sur diffé-rents aspects du contexte pour chaque tête d'attention. 
+Les résultats de chaque tête d'attention sont ensuite combinés pour former la sortie de la couche d'auto-attention. 
+
+•	**Réseau de neurones feed-forward :**
+
+Après la couche d'auto-attention, la sortie est traitée par un réseau de neu-rones feed-forward. 
+Il s'agit d'un réseau dense (ou entièrement connecté) qui permet au modèle d'apprendre des représentations plus complexes et d'ajouter de la non-linéarité au système.
+
+•	**Masquage :** 
+
+ChatGPT est un modèle auto-régressif, ce qui signifie qu'il génère une sé-quence de sortie un mot à la fois. 
+Pour empêcher le modèle de "tricher" en regardant les mots futurs lors de la génération de textes, un mécanisme de masquage est appliqué à la couche d'auto-attention. 
+Cela garantit que le modèle ne peut considérer que les mots précédents dans la séquence.
+
+•	**Embeddings et positional encoding :** 
+
+Les mots sont d'abord convertis en vecteurs numériques (embeddings) avant d'être traités par le modèle. 
+De plus, un encodage positionnel est ajouté aux embeddings pour indiquer la position des mots dans la séquence. 
+Cela permet au modèle de prendre en compte l'ordre des mots lors de l'apprentissage des dépendances entre eux.
+
+• **Entraînement préalable et affinage :** 
+
+ChatGPT est d'abord pré-entraîné sur un vaste ensemble de données tex-tuelles pour apprendre des représentations linguistiques générales. 
+Ensuite, il est affiné sur des tâches spécifiques, souvent avec des données annotées manuellement, pour le rendre plus utile dans des contextes spéci-fiques.
+ 
+
+En résumé, ChatGPT est basé sur l'architecture Transformer et utilise des couches d'auto-attention multi-têtes, des réseaux de neurones feed-forward, des con-nexions résiduelles et des normalisations de couche pour apprendre des représen-tations complexes de séquences de texte. 
+Le modèle est pré-entraîné sur de grandes quantités de données et peut être affiné pour des tâches spécifiques.
+
  
 ## Architecture de GPT-3 : 
  
@@ -74,17 +113,20 @@ L'architecture de GPT-3 est très similaire à celle de GPT-2, mais avec plusieu
 On peut décrire d’une manière générale de l'architec-ture de GPT-3 comme suit:
 
 -	Couche d'embedding d'entrée : 
-Le texte d'entrée est d'abord encodé en vecteurs denses à l'aide d'une couche d'embedding d'entrée.
+Les entrées textuelles sont converties en vecteurs en utilisant des plon-gements de mots (word embeddings) et une positional encoding pour ajou-ter des informations sur la position des mots dans la séquence.
 
 -	N couches de transformer : 
-GPT-3 utilise un total de N couches de transformer. Chaque couche com-prend une sous-couche d'attention multi-têtes, une sous-couche feed-forward, et une couche de normalisation. 
- 
+GPT-3 utilise un total de N couches de transformer. Chaque couche com-prend une sous-couche d'attention multi-têtes, une sous-couche feed-forward, et une couche de normalisation.
+
+-	Couche multi-head attention : 
+Cette couche calcule les poids d'attention entre les différents mots de la séquence, permettant au modèle de se concentrer sur les parties pertinentes du contexte. Elle dispose de 12 têtes d'attention.
+
 -	Couche de positionnement : 
 Pour aider le modèle à comprendre la position des différents éléments dans la séquence d'entrée, GPT-3 utilise une couche de positionnement. Cette couche ajoute une représentation de la position à l'embedding de chaque token.
 -	Couche de normalisation : 
 Après les N couches de transformer, GPT-3 utilise une couche de normalisa-tion finale pour normaliser les sorties.
--	Couche de sortie : 
-La couche de sortie finale génère une distribution de probabilité sur le vo-cabulaire, ce qui permet de générer du texte. La sortie de cette couche est souvent utilisée pour des tâches telles que la classification de texte ou la gé-nération de texte.
+-	Couche de décodage de sortie : 
+Les sorties des blocs de Transformer sont traitées à travers une couche linéaire, suivie d'une activation softmax, pour produire une distribution de probabilités sur le vocabulaire. Le mot avec la probabilité la plus élevée est sélectionné comme prédiction.
 
 ## Entrainement de ChatGPT
 
@@ -115,7 +157,11 @@ Après l'entraînement par renforcement, le modèle a été encore entraîné su
 Dans l'ensemble, la technique RLHF permet au modèle d'apprendre à partir des commentaires humains d'une manière qui équilibre le compromis entre exploration et exploitation. 
 Cette approche a conduit à un modèle capable de générer des réponses plus naturelles et engageantes dans une conversation.
 
-
+ ![image](https://user-images.githubusercontent.com/123748177/231160175-081bb647-f38b-4187-b381-8f1a038ea644.png)
+ 
+- ChatGPT a été affiné à partir d'un modèle de la série GPT-3.5, qui a terminé son entraînement début 2022. 
+-	ChatGPT et GPT-3.5 ont été entraînés sur une infrastructure de super calcul Azure AI. 
+ 
 ## Notions importantes : 
 
 **1.	NLP**
