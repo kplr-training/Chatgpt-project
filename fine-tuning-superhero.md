@@ -1,3 +1,4 @@
+## GPT-3 Fine-Tuning for Superhero Descriptions
 you first need to get an API key from OpenAI and install the Python package openai, which can be quickly done via pip.
 
 For the API key from OpenAI:
@@ -94,7 +95,6 @@ The response_txt contains the output of the GPT model.
 
 ## Fine-tuning the GPT model
 
-## GPT-3 Fine-Tuning for Superhero Descriptions
 The following code retrieves the previously created file out_openai_completion.csv and uses openai to fine-tune a GPT-3 model.
 ```
 import pandas as pd
