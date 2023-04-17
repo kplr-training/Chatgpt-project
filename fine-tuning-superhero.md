@@ -82,7 +82,7 @@ Imagine a complete and detailed description of a {age}-year-old {gender} fiction
 
 The most important parameters of this function are
 
-- model: The model used to generate the response. OpenAI offers four standard GPT-3 models (ada, babbage, curie, or davinci) that vary in size … and price of use. Here it is davinci — the biggest model.
+- model: The model used to generate the response. OpenAI offers four standard GPT-3 models (ada, babbage, curie, or davinci) that vary in size and price of use. 
 - prompt: The prompt that we want to fulfill with GPT-3.
 - temperature: The temperature is a number between 0 and 1 and controls how much randomness is in the output. We set the temperature to the maximum to allow the model to be as creative as possible in creating the response.
 - max_tokens: Defines the maximum length of the response.
