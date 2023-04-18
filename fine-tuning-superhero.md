@@ -140,7 +140,7 @@ The simplest way is probably to use the playground.
 
 It is now time to ask our model for a new prediction.
 
-![image](https://user-images.githubusercontent.com/123748177/232765809-f59fe48d-ed22-43c8-91f5-9e1893ec0ec3.png)
+![image](https://user-images.githubusercontent.com/123748177/232767892-601a4426-68ca-494d-9ec8-275f5a30bf2c.png)
 
 To do it in Python, Click on ‘View code’ at the top right of the screen.
 
