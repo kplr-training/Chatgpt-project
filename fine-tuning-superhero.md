@@ -112,7 +112,7 @@ prepared_data.to_csv('prepared_data.csv',index=False)
 subprocess.run('openai tools fine_tunes.prepare_data --file prepared_data.csv --quiet'.split())
 
 ## Start fine-tuning
-subprocess.run('openai api fine_tunes.create --training_file prepared_data_prepared.jsonl --model davinci --suffix "SuperHero"'.split())
+subprocess.run('openai api fine_tunes.create --training_file prepared_data_prepared.jsonl --model davinci --suffix "kplr"'.split())
 ```
 
 - First, the content of the file out_openai_completion.csv is loaded into the data frame df. 
@@ -122,6 +122,46 @@ subprocess.run('openai api fine_tunes.create --training_file prepared_data_prepa
 - The fine-tuning of the GPT-3 model is really achieved in the second subprocess.run(), where openai api fine_tunes.create is executed. In this function, we start by giving the name of the JSONL file created just before.
 - You will then need to select the model you wish to fine-tune.
 
+## Test your new model
+
+There are different ways to use a model for completion. Mainly via the Playground provided by OpenAI or via programming languages like Python.
+
+The simplest way is probably to use the playground.
+
+- Go to https://platform.openai.com/playground.
+- Click on ‘Model’ and search for the one with the suffix “kplr”.
 
 
+![image](https://user-images.githubusercontent.com/123748177/232755357-ac1fdf95-65e6-4b67-b7dc-82da9c6d3ae4.png)
 
+- Add in ‘Stop sequences’ the token ‘END’.
+
+![image](https://user-images.githubusercontent.com/123748177/232755628-c82ddc98-3701-4eca-86dc-854f06f04798.png)
+
+It is now time to ask our model for a new prediction.
+
+![image](https://user-images.githubusercontent.com/123748177/232765809-f59fe48d-ed22-43c8-91f5-9e1893ec0ec3.png)
+
+To do it in Python, Click on ‘View code’ at the top right of the screen.
+
+![image](https://user-images.githubusercontent.com/123748177/232766118-af3529dd-3e52-4041-9661-8ad5a89a6c05.png)
+
+In our case, in ‘View code’ we have this:
+
+```
+import os
+import openai
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+response = openai.Completion.create(
+  model="ada:ft-personal:kplr-2023-04-17-16-38-51",
+  prompt="18, man, can eat a lot ->",
+  temperature=0.7,
+  max_tokens=500,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0,
+  stop=["END"]
+)
+```
