@@ -29,6 +29,7 @@ LLaMA disposerait globalement des mêmes fonctionnalités que ChatGPT, à savoir
 - Génération automatique de texte
 - Capacité à échanger et à tenir une discussion cohérente
 - Réaliser des résumés de texte
+- Il propose de plus – et il s’agit là d’une fonctionnalité mise en avant par Zuckerberg lui-même – de construire des raisonnements mathématiques et de prédire des structures protéiques.
 
 ## 4- Quelles caractéristiques pour LLaMA de Meta ?
 
@@ -46,6 +47,44 @@ Pour l’instant, contrairement à Chat-GPT, LLaMA n’est pas accessible à tou
 
 Contrairement à GPT-3, Meta n'a utilisé que des données accessibles publiquement ce qui permettrait de rendre le modèle open-source.
 
+## 5- Les avantages de LLaMA
+
+Voici les avantages que présentent Llama en tant qu’IA : 
+
+- Ses ressources moindres
+- Sa rigueur
+- Elle est Open Source
+- Accès limité
+
+**Des ressources moindres**
+
+- LLaMA demande des ressources bien moins importantes pour fonctionner que beaucoup de modèles concurrents, pour une efficacité souvent égale, voire supérieure.
+
+- À titre d’exemple, on peut citer la version LlaMA-13B, qui surpasse GPT-3 et la version LlaMA-65B, qui obtient de meilleurs résultats que Chinchilla70B et PaLM-540B, alors que ce sont pourtant d’excellents modèles.
+
+- Sa vitesse de calcul s’en trouve donc augmentée.
+
+**Une grande rigueur**
+
+- Des études, citées par Meta dans son document de recherche détaillé, montrent que pour perfectionner l’IA, il est plus efficace d’avoir recours à des petits modèles entraînés sur de nombreuses données précises que d’utiliser de grands modèles aux multiples paramètres qui n’ont pas été suffisamment entraînés. 
+
+- Cela permet en effet de gagner en rigueur en réduisant le nombre d’erreurs et d’approximations. 
+
+**Llama fonctionne en open source**
+
+- Si les jeux de données utilisés par LLaMA sont moins fournis que ceux de ses concurrents, c’est parce que Meta a fait le choix de n’utiliser que des données publiques. 
+
+- Elles sont extraites à plus des deux tiers de dumps de Common Crawl, de corpus de livres (projet Gutenberg et un sous-ensemble de The Pile), de données scientifiques (ArXiv), de base de questions-réponses (StackExchange) et du jeu de données GitHub public disponible sur BigQuery. 
+
+- L’entreprise a fait savoir sa volonté de créer un modèle open-source afin qu’un maximum de chercheurs puissent travailler sur ce modèle et l’enrichir. 
+
+**Accès limité**
+
+- Le but de Meta n’est pas – pour le moment du moins – de commercialiser LLAMAl pour des plateformes tierces ou de le rendre accessible au grand public.
+
+- L’entreprise a clairement affiché sa volonté de faciliter la recherche scientifique. Seuls les chercheurs et chercheuses , issus du public ou de la société civile, sélectionnés sur le volet par l’entreprise, auront ainsi le privilège d’utiliser cet outil.  
+
+- Rappelez que ChatGBT et Bard ont été utilisés à mauvais escient à par des internautes malveillants pour créer du contenu toxique ou des logiciels malveillants.
 
 
 
