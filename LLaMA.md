@@ -86,5 +86,18 @@ Voici les avantages que présentent Llama en tant qu’IA :
 
 - Rappelez que ChatGBT et Bard ont été utilisés à mauvais escient à par des internautes malveillants pour créer du contenu toxique ou des logiciels malveillants.
 
+## 6- C'est quoi LLaMA CPP ?
 
+Llama CPP est un instrument permettant de mettre en œuvre des modèles linguistiques tels que LLaMA, Alpaca et GPT4All en C/C++ pur.
 
+Llama CPP est adapté à divers systèmes d’exploitation, dont Mac OS, Linux et Windows (via CMake). Il est aussi opérationnel dans un environnement Docker. Il permet l’utilisation de plusieurs modèles linguistiques, notamment :
+
+- LLaMA
+- Alpaca
+- GPT4All
+- Chinese LLaMA / Alpaca
+- Vigogne (français)
+
+Une fois Llama CPP compilé et les poids des modèles d’origine obtenus, l’instrument peut servir à convertir et quantifier les modèles. Il est également utilisable en mode interactif pour une expérience semblable à ChatGPT.
+
+L’une des principales caractéristiques de Llama est sa capacité à produire des réponses contextuellement adéquates en se basant sur les indications données par l’utilisateur. 
