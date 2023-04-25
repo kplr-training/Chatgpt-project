@@ -100,4 +100,3 @@ Llama CPP est adapté à divers systèmes d’exploitation, dont Mac OS, Linux e
 
 Une fois Llama CPP compilé et les poids des modèles d’origine obtenus, l’instrument peut servir à convertir et quantifier les modèles. Il est également utilisable en mode interactif pour une expérience semblable à ChatGPT.
 
-L’une des principales caractéristiques de Llama est sa capacité à produire des réponses contextuellement adéquates en se basant sur les indications données par l’utilisateur. 
