@@ -108,3 +108,7 @@ Dans leur travail, le groupe de Stanford a utilisé les instructions générées
 
 Dans un test à l’aveugle utilisant des entrées provenant du Self-Instruct Evaluation Set, les deux modèles ont obtenu des performances comparables selon l’équipe.
 
+
+## IMPORTANT LINKS 
+
+https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md
