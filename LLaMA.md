@@ -100,3 +100,11 @@ Llama CPP est adapté à divers systèmes d’exploitation, dont Mac OS, Linux e
 
 Une fois Llama CPP compilé et les poids des modèles d’origine obtenus, l’instrument peut servir à convertir et quantifier les modèles. Il est également utilisable en mode interactif pour une expérience semblable à ChatGPT.
 
+## 7- C'est quoi ALPACA?
+
+Alpaca est un modèle de langage qui reproduit les capacités du GPT-3.5 d’OpenAI. Créé par des chercheurs de Stanford à partir du modèle LLaMA de Meta.
+
+Dans leur travail, le groupe de Stanford a utilisé les instructions générées par l’intelligence artificielle pour entraîner Alpaca 7B, un modèle de langage que les chercheurs disent présenter de nombreux comportements similaires à ceux du modèle text-davinci-003 d’OpenAI. 
+
+Dans un test à l’aveugle utilisant des entrées provenant du Self-Instruct Evaluation Set, les deux modèles ont obtenu des performances comparables selon l’équipe.
+
